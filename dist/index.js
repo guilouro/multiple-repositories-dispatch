@@ -5254,7 +5254,7 @@ const core = __webpack_require__(470)
     repositories.forEach(async (repo) => {
       try {
         const post = `POST /repos/${repo.trim()}/dispatches`
-        console.log({ post })
+        console.log({ post, repositories, eventType, payload })
         await request(post, {
           headers: { authorization: `token ${token}` },
           mediaType: { previews: ['everest'] },
