@@ -7,10 +7,10 @@ inputs:
   repositories:
     description: 'A list of repositories to send the dispatch event'
     required: true
-  event-type:
+  event_type:
     description: 'Event name.'
     required: true
-  client-payload:
+  client_payload:
     description: 'JSON payload with extra informations. Default is {}'
 runs:
   using: 'node12'
