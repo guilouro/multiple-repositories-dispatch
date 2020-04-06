@@ -11,6 +11,7 @@ const core = require('@actions/core')
     repositories.forEach(async (repo) => {
       try {
         const post = `POST /repos/${repo}/dispatches`
+        console.log({ post })
         await request(post, {
           headers: { authorization: `token ${token}` },
           mediaType: { previews: ['everest'] },

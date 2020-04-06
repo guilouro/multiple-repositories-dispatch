@@ -5248,12 +5248,13 @@ const core = __webpack_require__(470)
   try {
     const token = core.getInput('repo_token')
     const repositories = core.getInput('repositories').split(' \n')
-    const eventType = core.getInput('event-type')
-    const payload = core.getInput('client-payload') || '{}'
+    const eventType = core.getInput('event_type')
+    const payload = core.getInput('client_payload') || '{}'
 
     repositories.forEach(async (repo) => {
       try {
         const post = `POST /repos/${repo}/dispatches`
+        console.log({ post })
         await request(post, {
           headers: { authorization: `token ${token}` },
           mediaType: { previews: ['everest'] },
