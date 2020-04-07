@@ -10,7 +10,6 @@ jobs:
         with:
           repo_token: ${{ secrets.REPO_TOKEN }}
           repositories: |
-            guilouro/csv-to-html
             guilouro/multiple-repositories-dispatch
           event_type: test_dispatch
-          client_payload: '{"ref": "${{ github.ref }}", "sha": "${{ github.sha }}"}'
+          client_payload: '{"github": ${{ toJson(github) }}}'

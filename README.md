@@ -29,6 +29,21 @@ _Obs: The client_payload is able to send a json with a maximum of 10 top-level a
 
 `client_payload: '{"github": ${{ toJson(github) }}}'`
 
+### How to receive the event
+
+```yml
+name: Receive Dispatch
+on:
+  repository_dispatch:
+    types: [event_name]
+jobs:
+  echo:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        run: echo ${{ github.event.client_payload }}
+```
+
 ## License
 
 [MIT](LICENSE)
