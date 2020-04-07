@@ -1,0 +1,22 @@
+{
+  "name": "github-action-dispatcher",
+  "version": "1.0.0",
+  "description": "An action to dispatch event to multiple repositories",
+  "keywords": [],
+  "author": "Guilherme Louro",
+  "license": "MIT",
+  "main": "index.js",
+  "scripts": {
+    "build": "ncc build src/index.js -o dist",
+    "test": "jest --silent"
+  },
+  "dependencies": {
+    "@actions/core": "^1.2.3",
+    "@octokit/request": "^5.3.4",
+    "colors": "^1.4.0"
+  },
+  "devDependencies": {
+    "@zeit/ncc": "^0.22.1",
+    "jest": "^25.2.7"
+  }
+}

@@ -1,0 +1,17 @@
+name: 'Multiple Repositories Dispatcher'
+description: 'An action to dispatch event to multiple repositories'
+inputs:
+  repo_token:
+    description: 'GitHub Personal Access Token with repo scope'
+    required: true
+  repositories:
+    description: 'A list of repositories to send the dispatch event'
+    required: true
+  event_type:
+    description: 'Event name.'
+    required: true
+  client_payload:
+    description: 'JSON payload with extra informations. Default is {}'
+runs:
+  using: 'node12'
+  main: 'dist/index.js'
