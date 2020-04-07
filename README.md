@@ -1,4 +1,4 @@
-# multiple-repositories-dispatch
+# Multiple Repositories Dispatch
 
 An action to dispatch event to multiple repositories.
 
@@ -23,7 +23,7 @@ An action to dispatch event to multiple repositories.
 | repo_token     | `true`   | The [Personal Access Token](https://help.github.com/en/github/authenticating-to-github/creating-a-personal-access-token-for-the-command-line) with `repo` scope of the project which will receive the event |         |
 | event_type     | `true`   | Event type name that will be used in `on: repository_dispatch`                                                                                                                                              |         |
 | repositories   | `true`   | A list of repositories that will receive the event. `org/repo`                                                                                                                                              |         |
-| client_payload | `false`  | JSON payload with extra. data                                                                                                                                                                               | `{}`    |
+| client_payload | `false`  | JSON payload with extra data                                                                                                                                                                                | `{}`    |
 
 _Obs: The client_payload is able to send a json with a maximum of 10 top-level as a specification of Github API. Therefore, set the value as this example below when need more than 10_
 
