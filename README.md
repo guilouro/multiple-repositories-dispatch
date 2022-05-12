@@ -6,7 +6,7 @@ An action to dispatch event to multiple repositories.
 
 ```yml
 - name: Dispatch event
-  uses: guilouro/multiple-repositories-dispatch@master
+  uses: guilouro/multiple-repositories-dispatch@latest
   with:
     repo_token: ${{ secrets.REPO_TOKEN }}
     event_type: event_name
