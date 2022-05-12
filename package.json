@@ -11,12 +11,12 @@
     "test": "jest --silent"
   },
   "dependencies": {
-    "@actions/core": "^1.2.3",
-    "@octokit/request": "^5.3.4",
+    "@actions/core": "^1.8.0",
+    "@octokit/request": "^5.6.3",
     "colors": "^1.4.0"
   },
   "devDependencies": {
     "@zeit/ncc": "^0.22.1",
-    "jest": "^25.2.7"
+    "jest": "^28.1.0"
   }
 }
